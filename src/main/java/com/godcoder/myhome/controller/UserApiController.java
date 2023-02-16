@@ -26,9 +26,9 @@ class UserApiController {
         } else if ("nativeQuery".equals(method)) {
             users = repository.findByUsernameNativeQuery(text);
         } else if ("querydsl".equals(method)) {
-            QUser user = QUser.user;
-            Predicate predicate = user.username.contains(text);
-            users = repository.findAll(predicate);
+            //QUser user = QUser.user;
+           // Predicate predicate = user.username.contains(text);
+            //users = repository.findAll(predicate);
         } else {
             users = repository.findAll();
         }
